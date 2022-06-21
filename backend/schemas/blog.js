@@ -9,13 +9,24 @@ export default {
       title: "Title",
     },
     {
+      title: "Slug",
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) =>
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
+      },
+    },
+    {
       title: "metadesc",
       name: "metadesc",
       type: "text",
     },
     {
       name: "content",
-      title: "Content",
+      title: "content",
       type: "array",
       of: [
         {
