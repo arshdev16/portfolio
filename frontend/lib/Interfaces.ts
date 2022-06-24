@@ -1,5 +1,9 @@
 // Types
-
+export interface AuthorModel {
+  name: string;
+  bio: string;
+  avatar: object;
+}
 export interface BlogModel {
   title: string;
   metadesc: string;
@@ -7,5 +11,5 @@ export interface BlogModel {
   createdAt: string;
   _id: string;
   blogImage: object;
-  author: object;
+  author: AuthorModel;
 }

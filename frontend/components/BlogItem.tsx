@@ -1,5 +1,5 @@
 import React from "react";
-import { BlogModel } from "../lib/types";
+import { BlogModel } from "../lib/Interfaces";
 
 type Props = {
   blog: BlogModel;
