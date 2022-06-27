@@ -5,8 +5,12 @@
 
 html {
   scroll-behavior: smooth;
-  background: #2B4570;
+  background: #0c244a;
   color: #fff;
   font-family: "Inter", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
 }
