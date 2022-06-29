@@ -17,16 +17,13 @@ const Navbar = (props: Props) => {
     scale: 1.3,
   }
   return (
-    <animated.nav
-      style={useSpring({
-        to: { opacity: 1, marginTop: 15 },
-        from: { opacity: 0, marginTop: -200 },
-        delay: 100,
-      })}
-      className="flex justify-between m-4"
+    <motion.nav
+    initial={{opacity: 0, margin: -100}}
+    animate={{ opacity: 1 , margin: 0, transition: { duration: 1 }}} 
+    className="flex justify-between m-4"
     >
       <div className={isOpen ? "hidden" : ""}>
-        <button onClick={() => setIsOpen(!isOpen)}>
+        <button className="m-4" onClick={() => setIsOpen(!isOpen)}>
           <HiMenu size={30} />
         </button>
       </div>
@@ -67,12 +64,7 @@ const Navbar = (props: Props) => {
         </div>
       </div>
 
-      <div className={isOpen ? "hidden" : ``}>
-        <Link href="/">
-          <a>Logo</a>
-        </Link>
-      </div>
-    </animated.nav>
+    </motion.nav>
   );
 };
 export default Navbar;
