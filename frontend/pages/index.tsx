@@ -5,7 +5,6 @@ import Image from "next/image";
 import { BlogModel } from "../lib/Interfaces";
 import { createClient } from "next-sanity";
 import { motion, useAnimation } from "framer-motion";
-import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import Dummy from "../public/dummy.png";
 

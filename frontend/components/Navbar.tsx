@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
-import { animated, useSpring } from "react-spring";
 import { motion } from "framer-motion";
 
 type Props = {
