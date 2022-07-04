@@ -14,12 +14,12 @@ const Navbar = (props: Props) => {
   const { isOpen, setIsOpen } = props;
   const whileHoverProps = {
     scale: 1.3,
-  }
+  };
   return (
     <motion.nav
-    initial={{opacity: 0, margin: -100}}
-    animate={{ opacity: 1 , margin: 0, transition: { duration: 1 }}} 
-    className="flex justify-between m-4"
+      initial={{ opacity: 0, margin: -100 }}
+      animate={{ opacity: 1, margin: 0, transition: { duration: 1 } }}
+      className="flex justify-between m-4"
     >
       <div className={isOpen ? "hidden" : ""}>
         <button className="m-4" onClick={() => setIsOpen(!isOpen)}>
@@ -62,7 +62,6 @@ const Navbar = (props: Props) => {
           </ul>
         </div>
       </div>
-
     </motion.nav>
   );
 };

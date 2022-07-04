@@ -4,6 +4,11 @@ export interface AuthorModel {
   bio: string;
   avatar: object;
 }
+
+export interface SlugModel{
+  current: string;
+  _type: string;
+}
 export interface BlogModel {
   title: string;
   metadesc: string;
@@ -12,4 +17,5 @@ export interface BlogModel {
   _id: string;
   blogImage: object;
   author: AuthorModel;
+  slug: SlugModel;
 }
