@@ -1,17 +1,13 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BlogModel } from "../../lib/Interfaces";
-import BlogCard from "../BlogCard";
+import Image from "next/image";
+import firebase from "../../public/firebase.svg";
+import Next from "../../public/Next.svg";
+import Sanity from "../../public/Sanity.svg";
+import Tailwind from "../../public/Tailwind.svg";
 
-type Props = {
-  blogs: Array<BlogModel>;
-  sanityClient: Object;
-};
-
-const SectionThree = (props: Props) => {
-  const { blogs } = props;
-
+const SectionFour = () => {
   const sectionVariants = {
     visible: {
       opacity: 1,
@@ -40,31 +36,46 @@ const SectionThree = (props: Props) => {
         className="flex flex-col items-center aspect-[393/400] min-h-[400px] bg-[url(../public/wave3mobile.svg)] lg:bg-[url(../public/wave2.svg)] lg:aspect-[960/300] bg-no-repeat bg-center bg-cover w-full"
       >
         <motion.h1
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 1.2 }}
-          className="text-3xl font-bold m-3"
-        >
-          My latest Blog Post<span className="hidden lg:inline">s</span>
-        </motion.h1>
-
-        <motion.div
-          className="w-max lg:hidden rounded-2xl flex flex-col bg-[#6419E6] mt-5 mx-auto"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1.1 }}
+          className="text-2xl font-bold m-3 my-10"
         >
-          {" "}
-          <BlogCard
-            blogImage={blogs[0].blogImage}
-            title={blogs[0].title}
-            metadesc={blogs[0].metadesc}
-            slug={blogs[0].slug}
-          />
-        </motion.div>
+          My Favourite Technologies
+        </motion.h1>
+        <motion.div>
 
-        <motion.div className="hidden lg:flex"></motion.div>
+          <motion.div className="flex w-full justify-evenly">
+
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.2 }}
+              className="bg-white h-min rounded-full mx-1"
+            >
+              <Image src={Next} width={100} height={100} />
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.2 }}
+              className="mx-1"
+            >
+              <Image src={firebase} width={100} height={100} />
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.2 }}>
+              <Image src={Sanity} width={100} height={100} />
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="flex w-full justify-evenly my-3">
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.2 }}>
+              <Image src={Tailwind} width={100} height={100} />
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </>
   );
 };
 
-export default SectionThree;
+export default SectionFour;

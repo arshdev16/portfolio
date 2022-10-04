@@ -27,7 +27,7 @@ const Navbar = (props: Props) => {
         </button>
       </div>
       <div
-        className={`bg-teal-500 fixed top-0 left-0 transition-all ${
+        className={`bg-purple-600 fixed top-0 left-0 transition-all ${
           isOpen ? "w-full h-screen" : "w-0 h-0"
         }`}
       >

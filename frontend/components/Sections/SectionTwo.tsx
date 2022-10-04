@@ -33,7 +33,7 @@ const SectionTwo = (props: Props) => {
         initial="hidden"
         className="bg-[#560090] min-h-max w-full flex flex-col items-center p-4 "
       >
-        <motion.h3 whileTap={{scale: 1.2}} whileHover={{scale: 1.2}} className="text-4xl my-2">About me</motion.h3>
+        <motion.h3 whileTap={{scale: 1.2}} whileHover={{scale: 1.2}} className="text-4xl font-bold my-2">About me</motion.h3>
         <p className="text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
           mollitia nam, eveniet amet repellat eaque sapiente similique molestias

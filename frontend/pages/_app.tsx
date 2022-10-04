@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <Component {...pageProps} isOpen={isOpen} />
+      <Component {...pageProps} isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   );
 }

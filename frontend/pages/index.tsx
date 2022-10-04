@@ -6,6 +6,7 @@ import { createClient } from "next-sanity";
 import SectionOne from "../components/Sections/SectionOne";
 import SectionTwo from "../components/Sections/SectionTwo";
 import SectionThree from "../components/Sections/SectionThree";
+import SectionFour from "../components/Sections/SectionFour";
 
 const client = createClient({
   projectId: "9cm066e3",
@@ -17,10 +18,13 @@ const client = createClient({
 type homeProps = {
   blogs: Array<BlogModel>;
   isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
 };
 
-const Home: NextPage<homeProps> = ({ blogs, isOpen }) => {
-  console.log(blogs)
+const Home: NextPage<homeProps> = ({ blogs, isOpen, setIsOpen }) => {
+  
+  useEffect(()=> setIsOpen(false));
+  
   return (
     <div
       className={
@@ -31,7 +35,8 @@ const Home: NextPage<homeProps> = ({ blogs, isOpen }) => {
     >
       <SectionOne />
       <SectionTwo />
-      <SectionThree blogs={blogs} sanityClient={client}/>
+      <SectionThree />
+      <SectionFour blogs={blogs} sanityClient={client} />
     </div>
   );
 };
